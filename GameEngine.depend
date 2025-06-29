@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1750184836 source:c:\users\adity\onedrive\documents\gameengine\gameengine\main.cpp
-	"Engine.h"
-	"Timer.h"
+1751205390 source:c:\users\adity\onedrive\documents\gameengine\gameengine\main.cpp
+	"Core/Engine.h"
+	"Timer/Timer.h"
 
 1750864233 c:\users\adity\onedrive\documents\gameengine\gameengine\core\engine.h
 	"SDL.h"
@@ -58,7 +58,7 @@
 
 1749551743 c:\users\adity\onedrive\documents\gameengine\gameengine\object\iobject.h
 
-1751015909 source:c:\users\adity\onedrive\documents\gameengine\gameengine\characters\warrior.cpp
+1751204675 source:c:\users\adity\onedrive\documents\gameengine\gameengine\characters\warrior.cpp
 	"Warrior.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -72,7 +72,7 @@
 	"SDL.h"
 	<string>
 
-1751109859 source:c:\users\adity\onedrive\documents\gameengine\gameengine\animation\animation.cpp
+1751205263 source:c:\users\adity\onedrive\documents\gameengine\gameengine\animation\animation.cpp
 	"Animation.h"
 	"TextureManager.h"
 
@@ -162,11 +162,11 @@
 	"Vector2D.h"
 	"Engine.h"
 
-1751013973 source:c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.cpp
+1751205796 source:c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.cpp
 	"CollisionHandler.h"
 	"Engine.h"
 
-1750865286 c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.h
+1751205796 c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.h
 	"SDL.h"
 	<vector>
 	"TileLayer.h"

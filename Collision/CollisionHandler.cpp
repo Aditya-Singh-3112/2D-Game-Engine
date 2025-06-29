@@ -5,8 +5,7 @@ CollisionHandler* CollisionHandler::s_Instance = nullptr;
 
 CollisionHandler::CollisionHandler()
 {
-    const auto& layers = Engine::GetInstance()->GetMap()->GetMapLayers();
-    m_CollisionLayer = dynamic_cast<TileLayer*>(layers[1]);  // collision layer
+    m_CollisionLayer = (TileLayer*)Engine::GetInstance()->GetMap()->GetMapLayers().front();
     m_CollisionTilemap  = m_CollisionLayer->GetTileMap();
 }
 

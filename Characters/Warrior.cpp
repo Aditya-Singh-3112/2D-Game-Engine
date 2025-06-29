@@ -28,18 +28,18 @@ Warrior::Warrior(Properties* props) : Character(props)
     m_RigidBody->SetGravity(9.0f);
 
     m_Animation = new Animation();
-    m_Animation->SetProps(m_TextureID, 0, 8, 80);
+    m_Animation->SetProps("player_idel", 0, 8, 80);
 }
 
 void Warrior::Draw()
 {
     m_Animation->Draw(m_Transform->X, m_Transform->Y, m_Width, m_Height);
 
-    /*Vector2D cam = Camera::GetInstance()->GetPosition();
+    Vector2D cam = Camera::GetInstance()->GetPosition();
     SDL_Rect box = m_Collider->Get();
     box.x -= cam.X;
     box.y -= cam.Y;
-    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box);*/
+    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box);
 }
 
 void Warrior::Update(float dt)
@@ -106,11 +106,27 @@ void Warrior::Update(float dt)
     // move on y-axis
     m_RigidBody->Update(dt);
     m_LastSafePosition.Y = m_Transform->Y;
+    m_Transform->Y += m_RigidBody->Position().Y;
+    m_Collider->Set(m_Transform->X, m_Transform->Y, 18, 50);
+
+    if (CollisionHandler::GetInstance()->MapCollision(m_Collider->Get())){
+        m_IsGrounded = true;
+        m_Transform->Y = m_LastSafePosition.Y;
+    }
+    else{
+        m_IsGrounded = false;
+    }
+
+    m_Origin->X = m_Transform->X + m_Width/2;
+    m_Origin->Y = m_Transform->Y + m_Height/2;
+
+    AnimationState();
+    m_Animation->Update();
 
 }
 void Warrior::AnimationState()
 {
-    m_Animation->SetProps("player_idle", 0, 6, 80);
+    m_Animation->SetProps("player_idel", 0, 6, 80);
 
     if (m_IsWalking){
         m_Animation->SetProps("player_walk", 0, 8, 80);
