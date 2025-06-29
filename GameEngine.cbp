@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GameEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="Core" />
+					<Add directory="Graphics" />
+					<Add directory="src/Physics" />
+					<Add directory="Physics" />
+					<Add directory="Object" />
+					<Add directory="Characters" />
+					<Add directory="Animation" />
+					<Add directory="Inputs" />
+					<Add directory="Timer" />
+					<Add directory="Map" />
+					<Add directory="Vendor/TinyXML" />
+					<Add directory="Camera" />
+					<Add directory="Collision" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="Core" />
+					<Add directory="Graphics" />
+					<Add directory="src/Physics" />
+					<Add directory="Physics" />
+					<Add directory="Object" />
+					<Add directory="Characters" />
+					<Add directory="Animation" />
+					<Add directory="Inputs" />
+					<Add directory="Timer" />
+					<Add directory="Map" />
+					<Add directory="Camera" />
+					<Add directory="Collision" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Animation/Animation.cpp" />
+		<Unit filename="Animation/Animation.h" />
+		<Unit filename="Camera/Camera.cpp" />
+		<Unit filename="Camera/Camera.h" />
+		<Unit filename="Characters/Character.h" />
+		<Unit filename="Characters/Warrior.cpp" />
+		<Unit filename="Characters/Warrior.h" />
+		<Unit filename="Collision/CollisionHandler.cpp" />
+		<Unit filename="Collision/CollisionHandler.h" />
+		<Unit filename="Core/Engine.cpp" />
+		<Unit filename="Core/Engine.h" />
+		<Unit filename="Graphics/TextureManager.cpp" />
+		<Unit filename="Graphics/TextureManager.h" />
+		<Unit filename="Inputs/Input.cpp" />
+		<Unit filename="Inputs/Input.h" />
+		<Unit filename="Map/GameMap.h" />
+		<Unit filename="Map/Layer.h" />
+		<Unit filename="Map/MapParser.cpp" />
+		<Unit filename="Map/MapParser.h" />
+		<Unit filename="Map/TileLayer.cpp" />
+		<Unit filename="Map/TileLayer.h" />
+		<Unit filename="Object/GameObject.h" />
+		<Unit filename="Object/IObject.h" />
+		<Unit filename="Physics/Collider.h" />
+		<Unit filename="Physics/Point.h" />
+		<Unit filename="Physics/RigidBody.h" />
+		<Unit filename="Physics/Transform.h" />
+		<Unit filename="Physics/Vector2D.h" />
+		<Unit filename="Timer/Timer.cpp" />
+		<Unit filename="Timer/Timer.h" />
+		<Unit filename="Vendor/TinyXML/tinystr.cpp" />
+		<Unit filename="Vendor/TinyXML/tinystr.h" />
+		<Unit filename="Vendor/TinyXML/tinyxml.cpp" />
+		<Unit filename="Vendor/TinyXML/tinyxml.h" />
+		<Unit filename="Vendor/TinyXML/tinyxmlerror.cpp" />
+		<Unit filename="Vendor/TinyXML/tinyxmlparser.cpp" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

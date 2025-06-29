@@ -1,0 +1,178 @@
+# depslib dependency file v1.0
+1750184836 source:c:\users\adity\onedrive\documents\gameengine\gameengine\main.cpp
+	"Engine.h"
+	"Timer.h"
+
+1750864233 c:\users\adity\onedrive\documents\gameengine\gameengine\core\engine.h
+	"SDL.h"
+	"SDL_image.h"
+	"GameMap.h"
+
+1750862734 source:c:\users\adity\onedrive\documents\gameengine\gameengine\core\engine.cpp
+	"Engine.h"
+	<iostream>
+	"TextureManager.h"
+	"Vector2D.h"
+	"Transform.h"
+	"Warrior.h"
+	"Input.h"
+	"SDL.h"
+	"Timer.h"
+	"MapParser.h"
+	"Camera.h"
+
+1750765326 c:\users\adity\onedrive\documents\gameengine\gameengine\graphics\texturemanager.h
+	<string>
+	"SDL.h"
+	<map>
+
+1750768560 source:c:\users\adity\onedrive\documents\gameengine\gameengine\graphics\texturemanager.cpp
+	"TextureManager.h"
+	"Engine.h"
+	"Camera.h"
+
+1749388253 c:\users\adity\onedrive\documents\gameengine\gameengine\physics\vector2d.h
+	<string>
+	<iostream>
+
+1749917058 c:\users\adity\onedrive\documents\gameengine\gameengine\physics\transform.h
+	"Vector2D.h"
+
+1751095924 c:\users\adity\onedrive\documents\gameengine\gameengine\characters\warrior.h
+	"Character.h"
+	"Animation.h"
+	"RigidBody.h"
+	"Collider.h"
+
+1749553883 c:\users\adity\onedrive\documents\gameengine\gameengine\characters\character.h
+	"GameObject.h"
+	<string>
+
+1750761996 c:\users\adity\onedrive\documents\gameengine\gameengine\object\gameobject.h
+	"Transform.h"
+	"IObject.h"
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	"Point.h"
+
+1749551743 c:\users\adity\onedrive\documents\gameengine\gameengine\object\iobject.h
+
+1751015909 source:c:\users\adity\onedrive\documents\gameengine\gameengine\characters\warrior.cpp
+	"Warrior.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Engine.h"
+	"CollisionHandler.h"
+	"Camera.h"
+	"Collider.h"
+
+1751109385 c:\users\adity\onedrive\documents\gameengine\gameengine\animation\animation.h
+	"SDL.h"
+	<string>
+
+1751109859 source:c:\users\adity\onedrive\documents\gameengine\gameengine\animation\animation.cpp
+	"Animation.h"
+	"TextureManager.h"
+
+1751014590 c:\users\adity\onedrive\documents\gameengine\gameengine\physics\rigidbody.h
+	"Vector2D.h"
+
+1751109875 c:\users\adity\onedrive\documents\gameengine\gameengine\inputs\input.h
+	"SDL.h"
+
+1751096613 source:c:\users\adity\onedrive\documents\gameengine\gameengine\inputs\input.cpp
+	"Input.h"
+	"Engine.h"
+
+1750184453 c:\users\adity\onedrive\documents\gameengine\gameengine\timer\timer.h
+
+1750184848 source:c:\users\adity\onedrive\documents\gameengine\gameengine\timer\timer.cpp
+	"Timer.h"
+	"SDL.h"
+
+1751009013 source:c:\users\adity\onedrive\documents\gameengine\gameengine\map\tilelayer.cpp
+	"TileLayer.h"
+	"TextureManager.h"
+
+1751008986 c:\users\adity\onedrive\documents\gameengine\gameengine\map\tilelayer.h
+	"Layer.h"
+	<string>
+	<vector>
+
+1750243037 c:\users\adity\onedrive\documents\gameengine\gameengine\map\layer.h
+
+1376507762 source:c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinystr.cpp
+	"tinystr.h"
+
+1376507762 c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinystr.h
+	<assert.h>
+	<string.h>
+
+1376507762 source:c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1376507762 c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1376507762 source:c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1376507762 source:c:\users\adity\onedrive\documents\gameengine\gameengine\vendor\tinyxml\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1750754347 source:c:\users\adity\onedrive\documents\gameengine\gameengine\map\mapparser.cpp
+	"MapParser.h"
+
+1750680901 c:\users\adity\onedrive\documents\gameengine\gameengine\map\mapparser.h
+	<map>
+	<string>
+	"GameMap.h"
+	"TileLayer.h"
+	"tinyxml.h"
+
+1750666214 c:\users\adity\onedrive\documents\gameengine\gameengine\map\gamemap.h
+	"Layer.h"
+	<vector>
+
+1751015514 c:\users\adity\onedrive\documents\gameengine\gameengine\physics\point.h
+	<iostream>
+
+1750762243 source:c:\users\adity\onedrive\documents\gameengine\gameengine\camera\camera.cpp
+	"Camera.h"
+
+1750762230 c:\users\adity\onedrive\documents\gameengine\gameengine\camera\camera.h
+	"SDL.h"
+	"Point.h"
+	"Vector2D.h"
+	"Engine.h"
+
+1751013973 source:c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.cpp
+	"CollisionHandler.h"
+	"Engine.h"
+
+1750865286 c:\users\adity\onedrive\documents\gameengine\gameengine\collision\collisionhandler.h
+	"SDL.h"
+	<vector>
+	"TileLayer.h"
+	"GameMap.h"
+	"Engine.h"
+
+1751008564 c:\users\adity\onedrive\documents\gameengine\gameengine\physics\collider.h
+	"SDL.h"
+

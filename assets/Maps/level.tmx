@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="128" tileheight="128" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="Tiles128x128" tilewidth="128" tileheight="128" tilecount="9" columns="3">
+  <image source="Tiles128x128.png" width="500" height="500"/>
+ </tileset>
+ <tileset firstgid="10" name="props" tilewidth="128" tileheight="128" tilecount="9" columns="3">
+  <image source="props.png" width="500" height="500"/>
+ </tileset>
+ <tileset firstgid="19" name="long-platforms" tilewidth="128" tileheight="128" tilecount="9" columns="3">
+  <image source="long-platforms.png" width="500" height="500"/>
+ </tileset>
+ <imagelayer id="1" name="bg" locked="1" opacity="0.97" offsetx="-1" offsety="5" repeatx="1" repeaty="1">
+  <image source="BackGround Layers/0.png" width="1280" height="720"/>
+ </imagelayer>
+ <layer id="1" name="Background" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,14,14,14,14,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,14,14,14,14,14,14,14,14,14,14,14,0,0,0,
+0,0,0,0,0,14,14,14,14,14,0,0,14,14,14,14,14,14,0,0,
+0,0,0,0,0,0,14,14,0,0,0,14,14,14,14,14,14,14,14,14,
+0,0,0,0,0,14,14,14,14,14,14,14,14,14,14,14,14,14,14,0,
+0,0,0,0,14,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,14,14,14,14,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,14,14,14,14,14,14,14,14,14,14,14,14,0,
+0,0,0,0,0,14,14,14,14,14,14,14,14,14,14,14,14,14,0,0,
+0,0,0,14,14,14,0,0,14,14,14,14,14,14,14,14,14,14,0,0,
+0,0,0,0,14,14,14,14,0,0,0,0,0,0,0,0,0,14,14,14,
+0,0,0,0,0,0,0,0,14,14,14,14,14,14,14,14,14,14,14,14
+</data>
+ </layer>
+ <layer id="2" name="Platforms" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,14,14,14,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,14,14,14,15,20,14,14,0,0,0,0,0,
+0,0,0,0,0,0,14,14,14,0,0,20,20,0,14,14,0,0,0,0,
+0,0,0,0,0,14,10,17,20,20,20,20,0,0,0,0,0,14,0,0,
+0,0,0,14,14,20,20,20,0,0,14,14,14,14,0,14,14,14,14,0,
+0,0,0,0,0,0,0,0,20,20,20,20,0,0,0,12,0,0,0,0,
+0,0,0,0,0,0,0,0,14,14,14,14,15,20,20,20,20,20,0,17,
+0,0,0,17,0,0,0,14,0,0,0,20,20,14,14,0,0,0,15,20,
+0,0,17,20,0,20,15,14,14,14,14,14,14,14,14,0,0,17,20,20,
+0,17,20,20,0,20,20,0,0,0,20,20,20,20,20,14,17,20,20,20,
+20,20,20,20,14,20,20,20,20,0,0,0,0,0,0,0,20,20,20,20
+</data>
+ </layer>
+ <objectgroup id="3" name="Props">
+  <object id="1" name="Rock" x="764.632" y="514.127" width="128" height="128"/>
+  <object id="2" name="Bush" x="2048" y="1280" width="128" height="128"/>
+  <object id="3" name="Crate" x="1536" y="1152" width="128" height="128"/>
+ </objectgroup>
+</map>
