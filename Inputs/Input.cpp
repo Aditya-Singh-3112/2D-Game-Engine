@@ -50,6 +50,7 @@ int Input::GetAxisKey(Axis axis)
             return 0;
     }
 
+    return 0;
 }
 
 void Input::KeyUp(){

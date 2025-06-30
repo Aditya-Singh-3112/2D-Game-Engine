@@ -50,13 +50,14 @@ bool Engine::Init()
     TextureManager::GetInstance()->Load("player_attack2", "assets/Fighter/Attack_2.png");
     TextureManager::GetInstance()->Load("player_attack1", "assets/Fighter/Attack_1.png");
     TextureManager::GetInstance()->Load("BG", "assets/Maps/BackGroundLayers/bg.png");
-    player = new Warrior(new Properties("player_idel", 100, 200, 128, 128));
+    std::cout << "1" << std::endl;
+    player = new Warrior(new Properties("player_idle", 100, 200, 128, 128));
 
     Transform tf;
     tf.Log();
 
     Camera::GetInstance()->SetTarget(player->GetOrigin());
-
+    std::cout << "2" << std::endl;
     return m_IsRunning = true;
 }
 
@@ -78,17 +79,22 @@ void Engine::Quit()
 void Engine::Update()
 {
     float dt = Timer::GetInstance()->GetDeltaTime();
+    std::cout << "4" << std::endl;
     m_LevelMap->Update();
+    std::cout << "5" << std::endl;
     Camera::GetInstance()->Update(dt);
+    std::cout << "6" << std::endl;
     player->Update(dt);
+    std::cout << "7" << std::endl;
 }
 void Engine::Render()
 {
     SDL_SetRenderDrawColor(m_Renderer, 124, 218, 254, 255);
+    std::cout << "3" << std::endl;
     SDL_RenderClear(m_Renderer);
     TextureManager::GetInstance()->Draw("BG", 0, 0, 2946, 880);
     m_LevelMap->Render();
-
+    SDL_Log("Map rendered");
     player->Draw();
 
     SDL_RenderPresent(m_Renderer);

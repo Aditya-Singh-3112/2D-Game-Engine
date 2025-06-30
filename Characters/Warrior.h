@@ -30,7 +30,6 @@ class Warrior: public Character
         bool m_IsRunning;
         bool m_IsAttacking;
         bool m_IsShielding;
-        bool m_IsWalking;
 
         float m_JumpTime;
         float m_JumpForce;
