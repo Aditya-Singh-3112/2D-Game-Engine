@@ -16,7 +16,7 @@ Warrior::Warrior(Properties* props) : Character(props)
     m_AttackTime = ATTACK_TIME;
 
     m_Collider = new Collider();
-    m_Collider->SetBuffer(25, 40, -30, -10);
+    m_Collider->SetBuffer(45, 40, -90, -50);
 
     m_RigidBody = new RigidBody();
     m_RigidBody->SetGravity(9.0f);
@@ -24,29 +24,26 @@ Warrior::Warrior(Properties* props) : Character(props)
     m_Animation = new Animation();
     m_Animation->SetProps(m_TextureID, 0, 8, 80);
 
-    if (m_Collider == nullptr){
-        SDL_Log("no collider");
+    if (!m_Collider) {
+        SDL_Log("Collider allocation failed");
     }
-
-    if (m_RigidBody == nullptr){
-        SDL_Log("no rb");
+    if (!m_RigidBody) {
+        SDL_Log("RigidBody allocation failed");
     }
-
-    if (m_Animation == nullptr){
-        SDL_Log("no animation");
+    if (!m_Animation) {
+        SDL_Log("Animation allocation failed");
     }
-
 }
 
 void Warrior::Draw()
 {
-    m_Animation->Draw(m_Transform->X, m_Transform->Y, m_Width, m_Height);
+    m_Animation->Draw(m_Transform->X, m_Transform->Y, m_Width, m_Height, m_Flip);
 
-    /*Vector2D cam = Camera::GetInstance()->GetPosition();
+    Vector2D cam = Camera::GetInstance()->GetPosition();
     SDL_Rect box = m_Collider->Get();
     box.x -= cam.X;
     box.y -= cam.Y;
-    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box);*/
+    SDL_RenderDrawRect(Engine::GetInstance()->GetRenderer(), &box);
 }
 
 void Warrior::Update(float dt)
@@ -116,7 +113,8 @@ void Warrior::Update(float dt)
     m_Transform->X += m_RigidBody->Position().X;
     std::cout << "    moved X to " << m_Transform->X << "\n";
 
-    m_Collider->Set(m_Transform->X, m_Transform->Y, 18, 50);
+    // Use actual sprite dimensions for collider
+    m_Collider->Set(m_Transform->X, m_Transform->Y, m_Width, m_Height);
     std::cout << "  [7] after collider->Set on X\n";
 
     std::cout << "  [8] before MapCollision on X\n";
@@ -137,7 +135,7 @@ void Warrior::Update(float dt)
     m_Transform->Y += m_RigidBody->Position().Y;
     std::cout << "    moved Y to " << m_Transform->Y << "\n";
 
-    m_Collider->Set(m_Transform->X, m_Transform->Y, 18, 50);
+    m_Collider->Set(m_Transform->X, m_Transform->Y, m_Width, m_Height);
     std::cout << "  [11] after collider->Set on Y\n";
 
     std::cout << "  [12] before MapCollision on Y\n";
@@ -170,22 +168,21 @@ void Warrior::AnimationState()
 {
     m_Animation->SetProps("player_idle", 0, 6, 80);
 
-    if (m_IsRunning){
+    if (m_IsRunning) {
         m_Animation->SetProps("player_run", 0, 8, 80);
     }
 
-    if (m_IsShielding){
+    if (m_IsShielding) {
         m_Animation->SetProps("player_shield", 0, 2, 80);
     }
 
-    if (m_IsAttacking){
+    if (m_IsAttacking) {
         m_Animation->SetProps("player_attack1", 0, 4, 80);
     }
 
-    if (m_IsJumping){
+    if (m_IsJumping) {
         m_Animation->SetProps("player_jump", 0, 10, 80);
     }
-
 }
 
 void Warrior::Clean()

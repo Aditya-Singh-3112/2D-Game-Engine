@@ -6,9 +6,9 @@
 #include "RigidBody.h"
 #include "Collider.h"
 
-#define RUN_FORCE 4.0f
+#define RUN_FORCE 10.9f
 #define ATTACK_TIME 20.0f
-#define JUMP_FORCE 30.0f
+#define JUMP_FORCE 45.0f
 #define JUMP_TIME 15.0f
 
 class Warrior: public Character

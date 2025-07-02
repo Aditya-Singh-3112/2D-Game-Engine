@@ -48,6 +48,7 @@ int Input::GetAxisKey(Axis axis)
 
         default:
             return 0;
+            break;
     }
 
     return 0;
