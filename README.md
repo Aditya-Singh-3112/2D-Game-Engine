@@ -42,22 +42,22 @@ A modular, portable 2D game engine built with **C++** and **SDL**, designed to s
 ./game_engine
 
 # Project Structure
-├── Animation/       # Animation management
-├── Camera/          # Camera handling
-├── Characters/      # Character-specific logic
-├── Collision/       # Collision detection modules
-├── Core/            # Engine core files
-├── Graphics/        # Rendering subsystem
-├── Inputs/          # Input abstraction (keyboard/mouse)
-├── Map/             # Tile/map loading handlers
-├── Object/          # General game object management
-├── Physics/         # Movement, gravity, collision response
-├── Timer/           # Frame timing utilities
-├── Vendor/
-│   └── TinyXML/     # XML parsing library
-├── assets/          # Sprites, levels, configs, etc.
-├── bin/ Debug/      # Build outputs (binary/debug)
-├── obj/ Debug/      # Object files
-├── main.cpp         # Entry point for engine/demo
-├── GameEngine.*     # Code::Blocks project files
-└── README.md        # (This file)
+├── Animation/       \
+├── Camera/          \
+├── Characters/     \
+├── Collision/      \
+├── Core/            \
+├── Graphics/       \
+├── Inputs/          \
+├── Map/            \
+├── Object/         \
+├── Physics/         \
+├── Timer/         \
+├── Vendor/\
+│   └── TinyXML/ \     
+├── assets/       \  
+├── bin/ Debug/    \  
+├── obj/ Debug/     \
+├── main.cpp         \
+├── GameEngine.*     \
+└── README.md        \
