@@ -54,10 +54,9 @@ A modular, portable 2D game engine built with **C++** and **SDL**, designed to s
 ├── Physics/         \
 ├── Timer/         \
 ├── Vendor/\
-│   └── TinyXML/ \     
-├── assets/       \  
-├── bin/ Debug/    \  
-├── obj/ Debug/     \
-├── main.cpp         \
-├── GameEngine.*     \
-└── README.md        \
+│   └── TinyXML/    
+├── assets/         
+├── bin/ Debug/      
+├── obj/ Debug/     
+├── main.cpp         
+├── GameEngine.*            
